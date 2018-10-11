@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'firstApp';
+  constructor(
+    private router: Router,
+  ){
+
+  }
+  openPage2(){
+    this.router.navigate[('/page2')];
+  }
+  goPage(){
+    this.router.navigate(['/page2']);
+  }
 }
